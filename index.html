@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List & Map View</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #map { height: 400px; background: #e9ecef; }
+    .card-item { transition: all 0.3s ease; }
+    /* Sticky on scroll */
+    .sticky { position: fixed; top: 0; left: 0; right: 0; z-index: 1050; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: top 0.3s ease; }
+    #spacer { transition: height 0.3s ease; }
+    /* Initial Search area */
+    #initialSearch .btn { transition: opacity 0.3s ease; }
+    /* mini search fade */
+    #filterSearch { transition: opacity 0.3s ease; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <section class="text-center py-3 border-bottom">
+    <h5 class="mb-1">Welcome to</h5>
+    <h3 class="mb-3">Hartjes Brood and Banket</h3>
+  </section>
+
+  <!-- Initial Search: shows before scroll -->
+  <div id="initialSearch" class="py-3 border-bottom">
+    <div class="container d-flex justify-content-center flex-column align-items-center">
+      <div class="input-group w-75 mb-2">
+        <input id="searchInputFull" type="text" class="form-control" placeholder="Search in your city" />
+      </div>
+      <div class="d-flex gap-2">
+        <button id="locationBtn" class="btn btn-outline-secondary">Use current location</button>
+        <button id="findBtn" class="btn btn-secondary">Find location</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter Bar (tabs + tags + search input) -->
+  <div id="filterBar">
+    <div class="container py-2 d-flex align-items-center gap-2 flex-wrap">
+      <div class="btn-group" role="group">
+        <button class="btn btn-primary active" id="list-tab">List</button>
+        <button class="btn btn-outline-primary" id="map-tab">Map</button>
+      </div>
+      <button class="btn btn-outline-secondary tag-filter" data-tag="pickup">Pickup</button>
+      <button class="btn btn-outline-secondary tag-filter" data-tag="delivery">Delivery</button>
+      <button class="btn btn-outline-secondary tag-filter" data-tag="surprise">Surprise Bag</button>
+      <div id="filterSearch" class="input-group ms-auto w-50" style="display:none; opacity:0;">
+        <input id="searchInputSmall" type="text" class="form-control" placeholder="Search in your city" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Spacer to prevent layout jump -->
+  <div id="spacer"></div>
+
+  <!-- Content Area -->
+  <div class="container mt-3">
+    <!-- List View -->
+    <div id="list-view" class="row">
+      <div class="col-md-6 col-lg-4 mb-3 card-item pickup delivery">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Hartjes brood & banket</h5>
+            <p class="card-text">Gennep<br><small>Spoorstraat 101</small></p>
+            <p class="text-muted">€ 5.00</p>
+            <a href="#" class="btn btn-success btn-sm">Buy on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Map View -->
+    <div id="map-view" class="row d-none">
+      <div class="col-lg-6">
+        <div class="col-12 mb-3 card-item pickup delivery">
+          <div class="card">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Hartjes brood & banket</h5>
+              <p class="card-text">Gennep<br><small>Spoorstraat 101</small></p>
+              <p class="text-muted">€ 5.00</p>
+              <a href="#" class="btn btn-success btn-sm">Buy on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div id="map">Map Placeholder</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5 py-3">
+    <p>© 2025 OrderL demo</p>
+  </footer>
+
+  <script>
+    // Tabs
+    document.getElementById('list-tab').addEventListener('click', () => {
+      document.getElementById('list-view').classList.remove('d-none');
+      document.getElementById('map-view').classList.add('d-none');
+      document.getElementById('list-tab').classList.replace('btn-outline-primary','btn-primary');
+      document.getElementById('map-tab').classList.replace('btn-primary','btn-outline-primary');
+    });
+    document.getElementById('map-tab').addEventListener('click', () => {
+      document.getElementById('map-view').classList.remove('d-none');
+      document.getElementById('list-view').classList.add('d-none');
+      document.getElementById('map-tab').classList.replace('btn-outline-primary','btn-primary');
+      document.getElementById('list-tab').classList.replace('btn-primary','btn-outline-primary');
+    });
+
+    // Tag filters
+    document.querySelectorAll('.tag-filter').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tag = btn.dataset.tag;
+        document.querySelectorAll('.card-item').forEach(card => {
+          card.style.display = card.classList.contains(tag) ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Sticky logic with animation
+    const filterBar = document.getElementById('filterBar');
+    const spacer = document.getElementById('spacer');
+    const fullSearch = document.getElementById('initialSearch');
+    const locationBtn = document.getElementById('locationBtn');
+    const findBtn = document.getElementById('findBtn');
+    const filterSearch = document.getElementById('filterSearch');
+    const triggerOffset = filterBar.offsetTop;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= triggerOffset) {
+        filterBar.classList.add('sticky');
+        spacer.style.height = filterBar.offsetHeight + 'px';
+        // hide only buttons
+        locationBtn.style.opacity = '0';
+        findBtn.style.opacity = '0';
+        // show small search
+        filterSearch.style.display = 'flex';
+        setTimeout(() => { filterSearch.style.opacity = '1'; }, 10);
+      } else {
+        filterBar.classList.remove('sticky');
+        spacer.style.height = '0px';
+        locationBtn.style.opacity = '1';
+        findBtn.style.opacity = '1';
+        filterSearch.style.opacity = '0';
+        setTimeout(() => { filterSearch.style.display = 'none'; }, 300);
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

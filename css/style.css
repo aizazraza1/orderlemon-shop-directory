@@ -1,0 +1,133 @@
+    @font-face {
+        font-family: 'SF Pro Display';
+        src: url('../font/SFProDisplay-Bold.eot');
+        src: url('../font/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+            url('../font/SFProDisplay-Bold.woff2') format('woff2'),
+            url('../font/SFProDisplay-Bold.woff') format('woff'),
+            url('../font/SFProDisplay-Bold.ttf') format('truetype'),
+            url('../font/SFProDisplay-Bold.svg#SFProDisplay-Bold') format('svg');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'SF Pro Display';
+        src: url('../font/SFProDisplay-Medium.eot');
+        src: url('../font/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+            url('../font/SFProDisplay-Medium.woff2') format('woff2'),
+            url('../font/SFProDisplay-Medium.woff') format('woff'),
+            url('../font/SFProDisplay-Medium.ttf') format('truetype'),
+            url('../font/SFProDisplay-Medium.svg#SFProDisplay-Medium') format('svg');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'SF Pro Display';
+        src: url('../font/SFProDisplay-Regular.eot');
+        src: url('../font/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+            url('../font/SFProDisplay-Regular.woff2') format('woff2'),
+            url('../font/SFProDisplay-Regular.woff') format('woff'),
+            url('../font/SFProDisplay-Regular.ttf') format('truetype'),
+            url('../font/SFProDisplay-Regular.svg#SFProDisplay-Regular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+
+
+    body {
+        font-family: 'SF Pro Display';
+        background-color: #F2F2F7;
+    }
+
+
+    .welcome_text {
+        padding: 48px 15px 20px;
+        background: #fff;
+    }
+
+    .welcome_text .heading h1 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #121212;
+    }
+
+    .welcome_text .heading h5 {
+        font-size: 13px;
+        font-weight: 400;
+        color: #121212;
+        margin: 0;
+    }
+
+   #stickyHeaderWrap .form-control {
+        background-image: url(../images/search_icon.svg);
+        background-repeat: no-repeat;
+        background-position: 2%;
+        background-size: auto;
+    }
+
+    .form-control {
+        background: hsl(240deg 3% 49% / 16%);
+        padding: 11px 40px;
+        font-size: 17px;
+        font-weight: 400;
+        border-radius: 50px;
+    }
+
+    #stickyHeaderWrap {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Animate on scroll */
+    #stickyHeaderWrap.sticky-animate {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .hide-initial-search .search_bar_sec {
+        padding: 0 !important;
+    }
+
+    #locationBtn {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 15px 0px;
+    }
+    #locationBtn>img{
+        padding-right: 4px;
+    }
+
+    /* Big search area */
+    #initialSearch {
+        transition: all 0.3s ease;
+    }
+
+    /* Hide small search by default */
+    #filterSearch {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* On scroll: hide big search + location button */
+    #stickyHeaderWrap.hide-initial-search #initialSearch {
+        opacity: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    /* On scroll: show small sticky search */
+    #stickyHeaderWrap.hide-initial-search #filterSearch {
+        display: flex !important;
+        opacity: 1;
+    }

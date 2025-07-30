@@ -15,11 +15,11 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <style></style>
   </head>
   <body onload="window.scrollTo(0, 0)">
-    <div id="stickyHeaderWrap">
+    <div id="stickyHeaderWrap" class="fix-header">
       <!-- Heading -->
       <section class="welcome_text text-center">
         <div class="container">
@@ -53,7 +53,7 @@
           </div>
           <div class="d-flex gap-2">
             <button id="locationBtn" class="btn">
-              <img src="./images/arrow_icon.svg" alt="" /> Use current location
+              <img src="assets/images/arrow_icon.svg" alt="" /> Use current location
             </button>
           </div>
         </div>
@@ -63,26 +63,26 @@
       <div id="filterBar" class="pt-3 pb-3" style="background-color: #f2f2f7">
         <div class="container py-2 d-flex align-items-center gap-3 flex-wrap">
           <div class="btn-group" role="group">
-            <button class="btn  active list_button" id="list-tab" style="border-top-right-radius: 0; border-bottom-right-radius: 0;"><img src="./images/list_icon.svg" alt="">List</button>
-            <button class="btn  list_button" id="map-tab" style="border-top-left-radius: 0; border-bottom-left-radius: 0;"><img src="./images/map_icon.svg" alt="">Map</button>
+            <button class="btn  active list_button" id="list-tab" style="border-top-right-radius: 0; border-bottom-right-radius: 0;"><img src="assets/images/list_icon.svg" alt="">List</button>
+            <button class="btn  list_button" id="map-tab" style="border-top-left-radius: 0; border-bottom-left-radius: 0;"><img src="assets/images/map_icon.svg" alt="">Map</button>
           </div>
           <button
             class="btn btn-outline-secondary tag-filter active"
             data-tag="pickup"
           >
-           <img src="./images/pickup_icon.svg" alt=""> Pickup
+           <img src="assets/images/pickup_icon.svg" alt=""> Pickup
           </button>
           <button
             class="btn btn-outline-secondary tag-filter"
             data-tag="delivery"
           >
-           <img src="./images/delivery_icon.svg" alt=""> Delivery
+           <img src="assets/images/delivery_icon.svg" alt=""> Delivery
           </button>
           <button
             class="btn btn-outline-secondary tag-filter"
             data-tag="surprise"
           >
-           <img src="./images/baq_icon.svg" alt=""> Surprise Bag
+           <img src="assets/images/baq_icon.svg" alt=""> Surprise Bag
           </button>
 
           <!-- Small search (scroll-only) -->
@@ -111,7 +111,7 @@
               <div class="col-md-5 p-0">
                  <div class="image">
                   <img
-                    src="./images/pickup_box_icon.svg"
+                    src="assets/images/pickup_box_icon.svg"
                     class="img-fluid"
                     alt="..."
                   />
@@ -123,20 +123,20 @@
                   Hartjes brood & banket <br> Gennep
                 </h5>
                 <div class="icon_list pb-1">
-                  <img src="./images/map_icon_box.svg" alt="">
+                  <img src="assets/images/map_icon_box.svg" alt="">
                   <span>
                     Spoorstraat 101
                   </span>
                 </div>
                 <div class="icon_list">
-                  <img src="./images/walk_icon.svg" alt="">
+                  <img src="assets/images/walk_icon.svg" alt="">
                   <span>
                    800 m   
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
                   <a href="#" class="btn  d-flex align-items-center justify-content-center">
-                   Buy on WhatsApp <img src="./images/whatsapp.svg" alt="" /> 
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
             </div>
@@ -148,7 +148,7 @@
               <div class="col-md-5 p-0">
                  <div class="image">
                   <img
-                    src="./images/delivery_box_icon.svg"
+                    src="assets/images/delivery_box_icon.svg"
                     class="img-fluid"
                     alt="..."
                   />
@@ -160,20 +160,20 @@
                   Hartjes brood & banket <br> Gennep
                 </h5>
                 <div class="icon_list pb-1">
-                  <img src="./images/map_icon_box.svg" alt="">
+                  <img src="assets/images/map_icon_box.svg" alt="">
                   <span>
                     Spoorstraat 101
                   </span>
                 </div>
                 <div class="icon_list">
-                  <img src="./images/walk_icon.svg" alt="">
+                  <img src="assets/images/walk_icon.svg" alt="">
                   <span>
                    800 m   
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
                   <a href="#" class="btn  d-flex align-items-center justify-content-center">
-                   Buy on WhatsApp <img src="./images/whatsapp.svg" alt="" /> 
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
             </div>
@@ -185,7 +185,7 @@
               <div class="col-md-5 p-0">
                  <div class="image">
                   <img
-                    src="./images/baq_box_icon.svg"
+                    src="assets/images/baq_box_icon.svg"
                     class="img-fluid"
                     alt="..."
                   />
@@ -197,20 +197,20 @@
                   Hartjes brood & banket <br> Gennep
                 </h5>
                 <div class="icon_list pb-1">
-                  <img src="./images/map_icon_box.svg" alt="">
+                  <img src="assets/images/map_icon_box.svg" alt="">
                   <span>
                     Spoorstraat 101
                   </span>
                 </div>
                 <div class="icon_list">
-                  <img src="./images/walk_icon.svg" alt="">
+                  <img src="assets/images/walk_icon.svg" alt="">
                   <span>
                    800 m   
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
                   <a href="#" class="btn  d-flex align-items-center justify-content-center">
-                   Buy on WhatsApp <img src="./images/whatsapp.svg" alt="" /> 
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
             </div>
@@ -222,7 +222,7 @@
               <div class="col-md-5 p-0">
                  <div class="image">
                   <img
-                    src="./images/pickup_box_icon.svg"
+                    src="assets/images/pickup_box_icon.svg"
                     class="img-fluid"
                     alt="..."
                   />
@@ -234,20 +234,20 @@
                   Hartjes brood & banket <br> Gennep
                 </h5>
                 <div class="icon_list pb-1">
-                  <img src="./images/map_icon_box.svg" alt="">
+                  <img src="assets/images/map_icon_box.svg" alt="">
                   <span>
                     Spoorstraat 101
                   </span>
                 </div>
                 <div class="icon_list">
-                  <img src="./images/walk_icon.svg" alt="">
+                  <img src="assets/images/walk_icon.svg" alt="">
                   <span>
                    800 m   
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
                   <a href="#" class="btn  d-flex align-items-center justify-content-center">
-                   Buy on WhatsApp <img src="./images/whatsapp.svg" alt="" /> 
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
             </div>
@@ -259,7 +259,7 @@
               <div class="col-md-5 p-0">
                  <div class="image">
                   <img
-                    src="./images/delivery_box_icon.svg"
+                    src="assets/images/delivery_box_icon.svg"
                     class="img-fluid"
                     alt="..."
                   />
@@ -271,20 +271,20 @@
                   Hartjes brood & banket <br> Gennep
                 </h5>
                 <div class="icon_list pb-1">
-                  <img src="./images/map_icon_box.svg" alt="">
+                  <img src="assets/images/map_icon_box.svg" alt="">
                   <span>
                     Spoorstraat 101
                   </span>
                 </div>
                 <div class="icon_list">
-                  <img src="./images/walk_icon.svg" alt="">
+                  <img src="assets/images/walk_icon.svg" alt="">
                   <span>
                    800 m   
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
                   <a href="#" class="btn  d-flex align-items-center justify-content-center">
-                   Buy on WhatsApp <img src="./images/whatsapp.svg" alt="" /> 
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
             </div>
@@ -296,7 +296,7 @@
               <div class="col-md-5 p-0">
                  <div class="image">
                   <img
-                    src="./images/baq_box_icon.svg"
+                    src="assets/images/baq_box_icon.svg"
                     class="img-fluid"
                     alt="..."
                   />
@@ -308,20 +308,20 @@
                   Hartjes brood & banket <br> Gennep
                 </h5>
                 <div class="icon_list pb-1">
-                  <img src="./images/map_icon_box.svg" alt="">
+                  <img src="assets/images/map_icon_box.svg" alt="">
                   <span>
                     Spoorstraat 101
                   </span>
                 </div>
                 <div class="icon_list">
-                  <img src="./images/walk_icon.svg" alt="">
+                  <img src="assets/images/walk_icon.svg" alt="">
                   <span>
                    800 m   
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
                   <a href="#" class="btn  d-flex align-items-center justify-content-center">
-                   Buy on WhatsApp <img src="./images/whatsapp.svg" alt="" /> 
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
             </div>
@@ -333,7 +333,7 @@
               <div class="col-md-5 p-0">
                  <div class="image">
                   <img
-                    src="./images/pickup_box_icon.svg"
+                    src="assets/images/pickup_box_icon.svg"
                     class="img-fluid"
                     alt="..."
                   />
@@ -345,20 +345,20 @@
                   Hartjes brood & banket <br> Gennep
                 </h5>
                 <div class="icon_list pb-1">
-                  <img src="./images/map_icon_box.svg" alt="">
+                  <img src="assets/images/map_icon_box.svg" alt="">
                   <span>
                     Spoorstraat 101
                   </span>
                 </div>
                 <div class="icon_list">
-                  <img src="./images/walk_icon.svg" alt="">
+                  <img src="assets/images/walk_icon.svg" alt="">
                   <span>
                    800 m   
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
                   <a href="#" class="btn  d-flex align-items-center justify-content-center">
-                   Buy on WhatsApp <img src="./images/whatsapp.svg" alt="" /> 
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
             </div>
@@ -370,7 +370,7 @@
               <div class="col-md-5 p-0">
                  <div class="image">
                   <img
-                    src="./images/delivery_box_icon.svg"
+                    src="assets/images/delivery_box_icon.svg"
                     class="img-fluid"
                     alt="..."
                   />
@@ -382,20 +382,131 @@
                   Hartjes brood & banket <br> Gennep
                 </h5>
                 <div class="icon_list pb-1">
-                  <img src="./images/map_icon_box.svg" alt="">
+                  <img src="assets/images/map_icon_box.svg" alt="">
                   <span>
                     Spoorstraat 101
                   </span>
                 </div>
                 <div class="icon_list">
-                  <img src="./images/walk_icon.svg" alt="">
+                  <img src="assets/images/walk_icon.svg" alt="">
                   <span>
                    800 m   
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
                   <a href="#" class="btn  d-flex align-items-center justify-content-center">
-                   Buy on WhatsApp <img src="./images/whatsapp.svg" alt="" /> 
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
+                  </a>
+                </div>
+            </div>
+              </div>
+            </div>
+        </div>
+          <div class="col-md-6 card-item surprise">
+            <div class="row list_item_box">
+              <div class="col-md-5 p-0">
+                 <div class="image">
+                  <img
+                    src="assets/images/baq_box_icon.svg"
+                    class="img-fluid"
+                    alt="..."
+                  />
+              </div>
+              </div>
+              <div class="col-md-7">
+                 <div class="content">
+                <h5 class="card-title">
+                  Hartjes brood & banket <br> Gennep
+                </h5>
+                <div class="icon_list pb-1">
+                  <img src="assets/images/map_icon_box.svg" alt="">
+                  <span>
+                    Spoorstraat 101
+                  </span>
+                </div>
+                <div class="icon_list">
+                  <img src="assets/images/walk_icon.svg" alt="">
+                  <span>
+                   800 m   
+                  </span>
+                </div>
+                <div class="whats_app_button text-end">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
+                  </a>
+                </div>
+            </div>
+              </div>
+            </div>
+        </div>
+         <div class="col-md-6 card-item pickup">
+            <div class="row list_item_box">
+              <div class="col-md-5 p-0">
+                 <div class="image">
+                  <img
+                    src="assets/images/pickup_box_icon.svg"
+                    class="img-fluid"
+                    alt="..."
+                  />
+              </div>
+              </div>
+              <div class="col-md-7">
+                 <div class="content">
+                <h5 class="card-title">
+                  Hartjes brood & banket <br> Gennep
+                </h5>
+                <div class="icon_list pb-1">
+                  <img src="assets/images/map_icon_box.svg" alt="">
+                  <span>
+                    Spoorstraat 101
+                  </span>
+                </div>
+                <div class="icon_list">
+                  <img src="assets/images/walk_icon.svg" alt="">
+                  <span>
+                   800 m   
+                  </span>
+                </div>
+                <div class="whats_app_button text-end">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
+                  </a>
+                </div>
+            </div>
+              </div>
+            </div>
+        </div>
+         <div class="col-md-6 card-item  delivery">
+            <div class="row list_item_box">
+              <div class="col-md-5 p-0">
+                 <div class="image">
+                  <img
+                    src="assets/images/delivery_box_icon.svg"
+                    class="img-fluid"
+                    alt="..."
+                  />
+              </div>
+              </div>
+              <div class="col-md-7">
+                 <div class="content">
+                <h5 class="card-title">
+                  Hartjes brood & banket <br> Gennep
+                </h5>
+                <div class="icon_list pb-1">
+                  <img src="assets/images/map_icon_box.svg" alt="">
+                  <span>
+                    Spoorstraat 101
+                  </span>
+                </div>
+                <div class="icon_list">
+                  <img src="assets/images/walk_icon.svg" alt="">
+                  <span>
+                   800 m   
+                  </span>
+                </div>
+                <div class="whats_app_button text-end">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
             </div>
@@ -410,7 +521,7 @@
               <div class="col-md-5 p-0">
                  <div class="image">
                   <img
-                    src="./images/baq_box_icon.svg"
+                    src="assets/images/baq_box_icon.svg"
                     class="img-fluid"
                     alt="..."
                   />
@@ -422,20 +533,20 @@
                   Hartjes brood & banket <br> Gennep
                 </h5>
                 <div class="icon_list pb-1">
-                  <img src="./images/map_icon_box.svg" alt="">
+                  <img src="assets/images/map_icon_box.svg" alt="">
                   <span>
                     Spoorstraat 101
                   </span>
                 </div>
                 <div class="icon_list">
-                  <img src="./images/walk_icon.svg" alt="">
+                  <img src="assets/images/walk_icon.svg" alt="">
                   <span>
                    800 m   
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
                   <a href="#" class="btn  d-flex align-items-center justify-content-center">
-                   Buy on WhatsApp <img src="./images/whatsapp.svg" alt="" /> 
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
             </div>
@@ -454,6 +565,6 @@
     </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

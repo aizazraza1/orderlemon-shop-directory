@@ -43,3 +43,6 @@ window.addEventListener("scroll", () => {
   const header = document.getElementById("stickyHeaderWrap");
   header.classList.toggle("hide-initial-search", window.scrollY > 100);
 });
+
+
+

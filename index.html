@@ -43,7 +43,7 @@
         <div
           class="container d-flex justify-content-center flex-column align-items-center"
         >
-          <div class="input-group w-50 mb-2">
+          <div class="input-group  mb-2" style="width: 693px; max-width: 100%;">
             <input
               id="searchInputFull"
               type="text"
@@ -61,12 +61,13 @@
 
       <!-- Sticky Tag Bar + Small Search -->
       <div id="filterBar" class="pt-3 pb-3" style="background-color: #f2f2f7">
-        <div class="container py-2 d-flex align-items-center gap-3 flex-wrap">
+        <div class="container py-2 d-flex align-items-center gap-3 flex-wrap filter_tab_bar">
           <div class="btn-group" role="group">
             <button class="btn  active list_button" id="list-tab" style="border-top-right-radius: 0; border-bottom-right-radius: 0;"><img src="assets/images/list_icon.svg" alt="">List</button>
             <button class="btn  list_button" id="map-tab" style="border-top-left-radius: 0; border-bottom-left-radius: 0;"><img src="assets/images/map_icon.svg" alt="">Map</button>
           </div>
-          <button
+          <div class="d-flex align-items-center gap-3">
+             <button
             class="btn btn-outline-secondary tag-filter active"
             data-tag="pickup"
           >
@@ -84,9 +85,11 @@
           >
            <img src="assets/images/baq_icon.svg" alt=""> Surprise Bag
           </button>
+          </div>
+         
 
           <!-- Small search (scroll-only) -->
-          <div id="filterSearch" class="input-group ms-auto w-50">
+          <div id="filterSearch" class="input-group ms-auto scroll_search">
             <input
               id="searchInputSmall"
               type="text"
@@ -106,7 +109,7 @@
       <div class="container">
         <!-- List View -->
         <div id="list-view" class="row gx-5">
-          <div class="col-md-6 card-item pickup">
+          <div class="col-lg-6 card-item pickup">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -135,7 +138,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -143,7 +146,7 @@
               </div>
             </div>
         </div>
-         <div class="col-md-6 card-item  delivery">
+         <div class="col-lg-6 card-item  delivery">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -172,7 +175,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -180,7 +183,7 @@
               </div>
             </div>
         </div>
-         <div class="col-md-6 card-item surprise">
+         <div class="col-lg-6 card-item surprise">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -209,7 +212,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -217,7 +220,7 @@
               </div>
             </div>
         </div>
-         <div class="col-md-6 card-item pickup">
+         <div class="col-lg-6 card-item pickup">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -246,7 +249,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -254,7 +257,7 @@
               </div>
             </div>
         </div>
-         <div class="col-md-6 card-item  delivery">
+         <div class="col-lg-6 card-item  delivery">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -283,7 +286,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -291,7 +294,7 @@
               </div>
             </div>
         </div>
-         <div class="col-md-6 card-item surprise">
+         <div class="col-lg-6 card-item surprise">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -320,7 +323,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -328,7 +331,7 @@
               </div>
             </div>
         </div>
-         <div class="col-md-6 card-item pickup">
+         <div class="col-lg-6 card-item pickup">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -357,7 +360,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -365,7 +368,7 @@
               </div>
             </div>
         </div>
-         <div class="col-md-6 card-item  delivery">
+         <div class="col-lg-6 card-item  delivery">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -394,7 +397,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -402,7 +405,7 @@
               </div>
             </div>
         </div>
-          <div class="col-md-6 card-item surprise">
+          <div class="col-lg-6 card-item surprise">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -431,7 +434,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -439,7 +442,7 @@
               </div>
             </div>
         </div>
-         <div class="col-md-6 card-item pickup">
+         <div class="col-lg-6 card-item pickup">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -468,7 +471,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -476,7 +479,7 @@
               </div>
             </div>
         </div>
-         <div class="col-md-6 card-item  delivery">
+         <div class="col-lg-6 card-item  delivery">
             <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
@@ -505,7 +508,7 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
@@ -516,8 +519,9 @@
         </div>
         <!-- Map View -->
         <div id="map-view" class="row d-none">
-         <div class="col-md-6 card-item surprise">
-            <div class="row list_item_box">
+         <div class="col-md-6 ">
+          <div class="card-item surprise ">
+               <div class="row list_item_box">
               <div class="col-md-5 p-0">
                  <div class="image">
                   <img
@@ -545,14 +549,89 @@
                   </span>
                 </div>
                 <div class="whats_app_button text-end">
-                  <a href="#" class="btn  d-flex align-items-center justify-content-center">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
                    Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
                   </a>
                 </div>
             </div>
               </div>
             </div>
-        </div>
+          </div>
+          <div class="card-item delivery ">
+               <div class="row list_item_box">
+              <div class="col-md-5 p-0">
+                 <div class="image">
+                  <img
+                    src="assets/images/delivery_box_icon.svg"
+                    class="img-fluid"
+                    alt="..."
+                  />
+              </div>
+              </div>
+              <div class="col-md-7">
+                 <div class="content">
+                <h5 class="card-title">
+                  Hartjes brood & banket <br> Gennep
+                </h5>
+                <div class="icon_list pb-1">
+                  <img src="assets/images/map_icon_box.svg" alt="">
+                  <span>
+                    Spoorstraat 101
+                  </span>
+                </div>
+                <div class="icon_list">
+                  <img src="assets/images/walk_icon.svg" alt="">
+                  <span>
+                   800 m   
+                  </span>
+                </div>
+                <div class="whats_app_button text-end">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
+                  </a>
+                </div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item pickup ">
+               <div class="row list_item_box">
+              <div class="col-md-5 p-0">
+                 <div class="image">
+                  <img
+                    src="assets/images/pickup_box_icon.svg"
+                    class="img-fluid"
+                    alt="..."
+                  />
+              </div>
+              </div>
+              <div class="col-md-7">
+                 <div class="content">
+                <h5 class="card-title">
+                  Hartjes brood & banket <br> Gennep
+                </h5>
+                <div class="icon_list pb-1">
+                  <img src="assets/images/map_icon_box.svg" alt="">
+                  <span>
+                    Spoorstraat 101
+                  </span>
+                </div>
+                <div class="icon_list">
+                  <img src="assets/images/walk_icon.svg" alt="">
+                  <span>
+                   800 m   
+                  </span>
+                </div>
+                <div class="whats_app_button text-end">
+                  <a href="#" class="btn  d-flex align-items-center justify-content-end">
+                   Buy on WhatsApp <img src="assets/images/whatsapp.svg" alt="" /> 
+                  </a>
+                </div>
+            </div>
+              </div>
+            </div>
+          </div>
+         </div>
           <div class="col-lg-6">
             <div id="map">Map Placeholder</div>
           </div>

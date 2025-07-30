@@ -42,7 +42,9 @@ body {
   font-family: "SF Pro Display";
   background-color: #f2f2f7;
 }
-
+.container {
+  max-width: 1200px;
+}
 .welcome_text {
   padding: 48px 15px 20px;
   background: #fff;
@@ -109,14 +111,15 @@ section.tabs {
   padding: 0px 15px;
 }
 .list_item_box .content {
-  padding: 16px 13px 16px 20px;
+  padding: 16px 0px 16px 20px;
   background: #ffffff;
   position: relative;
 }
 .whats_app_button {
-  position: absolute;
+  /* position: absolute;
   bottom: 13px;
-  right: -5px;
+  right: -5px; */
+  margin-top: -30px;
 }
 .list_item_box .content h5 {
   font-size: 18px;
@@ -237,7 +240,9 @@ section.tabs {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
+#filterBar .scroll_search {
+    width: 40%;
+}
 /* On scroll: hide big search + location button */
 #stickyHeaderWrap.hide-initial-search #initialSearch {
   opacity: 0;
@@ -252,4 +257,24 @@ section.tabs {
 #stickyHeaderWrap.hide-initial-search #filterSearch {
   display: flex !important;
   opacity: 1;
+}
+
+
+@media(max-width:1199px){
+    #filterBar .scroll_search {
+    width: 34%;
+}
+.whats_app_button {
+    margin-top: -10px;
+}
+}
+@media(max-width:767px){
+    .hide-initial-search .filter_tab_bar {
+    flex-wrap: nowrap !important;
+    overflow: scroll;
+}
+.list_item_box .image {
+    height: 117px;
+    border-radius: 12px;
+}
 }
